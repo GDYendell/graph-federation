@@ -27,6 +27,13 @@ jobs:
           private-key: ${{ secrets.GRAPH_FEDERATOR }}
           repositories: graph-federation
 
+      - name: Bootstrap release-please
+        run: |
+          npx release-please bootstrap \
+            --repo-url=${{ github.repository }} \
+            --token=${{ steps.app-token.outputs.token }} \
+            --default-branch=dev
+
       - name: Release Please
         id: release
         uses: googleapis/release-please-action@v4.1.3
