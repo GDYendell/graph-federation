@@ -10,19 +10,43 @@
   "packages": {
     "charts/apps": {
       "package-name": "apps",
-      "release-type": "helm"
+      "release-type": "helm",
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "/charts/apps/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }]
     },
     "charts/graph": {
       "package-name": "graph",
-      "release-type": "helm"
+      "release-type": "helm",
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "/charts/graph/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }]
     },
     "charts/monitoring": {
       "package-name": "monitoring",
-      "release-type": "helm"
+      "release-type": "helm",
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "/charts/monitoring/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }]
     },
     "charts/supergraph": {
+      "component": "supergraph",
       "release-type": "helm",
-      "component": "supergraph"
+      "extra-files": [
+        {
+          "type": "yaml",
+          "path": "/charts/supergraph/Chart.yaml",
+          "jsonpath": "$.appVersion"
+        }]
     },
     "schema": {
       "package-name": "supergraph-schema",
