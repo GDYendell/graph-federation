@@ -33,7 +33,8 @@ jobs:
 
   supergraph_publish:
     # Deduplicate jobs from pull requests and branch pushes within the same repo.
-    needs:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    needs: 
       - release_please
       - helm_lint
       - supergraph_generate
