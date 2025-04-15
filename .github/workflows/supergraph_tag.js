@@ -21,7 +21,8 @@ module.exports = async ({github, context, token}) => {
   console.log(`Supergraph Pull Request: ${JSON.stringify(pullRequest)}`);
 
   const git = simpleGit();
-  const lastTag = await git.raw('describe', '--tags', '--match', 'supergraph@v*', 'HEAD').catch((err) => undefined);
+  const describe = await git.raw('describe', '--tags', '--match', 'supergraph@v*', 'HEAD').catch((err) => undefined);
+  const lastTag = describe.trim();
   console.log(`Last Tag: ${JSON.stringify(lastTag)}`);
   const commitsSince = lastTag ? await git.raw('rev-list', `${lastTag}..HEAD`, '--count') : await git.raw('rev-list', '--count', '--all');
   console.log(`Commits Since: ${commitsSince}`);
