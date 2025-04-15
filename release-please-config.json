@@ -41,6 +41,7 @@
     "charts/supergraph": {
       "component": "supergraph",
       "release-type": "helm",
+      "pull-request-title-pattern": "^chore\\(main\\): release ${component} ${version}",
       "extra-files": [
         {
           "type": "yaml",
@@ -50,7 +51,8 @@
     },
     "schema": {
       "component": "supergraph-schema",
-      "release-type": "simple"
+      "release-type": "simple",
+      "pull-request-title-pattern": "^chore\\(main\\): release ${component} ${version}"
     }
   },
   "plugins": [
