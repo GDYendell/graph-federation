@@ -52,14 +52,6 @@
       "package-name": "supergraph-schema",
       "release-type": "simple",
       "component": "supergraph-schema"
-    },
-    "workflows/compose": {
-      "package-name": "compose",
-      "release-type": "simple"
-    },
-    "workflows/update": {
-      "package-name": "update",
-      "release-type": "simple"
     }
   },
   "plugins": [
