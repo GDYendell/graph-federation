@@ -9,7 +9,7 @@
   "bump-patch-for-minor-pre-major": true,
   "packages": {
     "charts/apps": {
-      "package-name": "apps",
+      "component": "apps",
       "release-type": "helm",
       "extra-files": [
         {
@@ -19,7 +19,7 @@
         }]
     },
     "charts/graph": {
-      "package-name": "graph",
+      "component": "graph",
       "release-type": "helm",
       "extra-files": [
         {
@@ -29,7 +29,7 @@
         }]
     },
     "charts/monitoring": {
-      "package-name": "monitoring",
+      "component": "monitoring",
       "release-type": "helm",
       "extra-files": [
         {
@@ -49,9 +49,8 @@
         }]
     },
     "schema": {
-      "package-name": "supergraph-schema",
-      "release-type": "simple",
-      "component": "supergraph-schema"
+      "component": "supergraph-schema",
+      "release-type": "simple"
     }
   },
   "plugins": [
