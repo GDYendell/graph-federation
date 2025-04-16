@@ -7,6 +7,7 @@
   "separate-pull-requests": true,
   "bump-minor-pre-major": true,
   "bump-patch-for-minor-pre-major": true,
+  "group-pull-request-title-pattern": "chore${scope}: release supergraph libraries",
   "packages": {
     "charts/apps": {
       "component": "apps",
@@ -41,7 +42,6 @@
     "charts/supergraph": {
       "component": "supergraph",
       "release-type": "helm",
-      "pull-request-title-pattern": "chore${scope}: release${component} ${version}",
       "extra-files": [
         {
           "type": "yaml",
@@ -51,8 +51,7 @@
     },
     "schema": {
       "component": "supergraph-schema",
-      "release-type": "simple",
-      "pull-request-title-pattern": "chore${scope}: release${component} ${version}"
+      "release-type": "simple"
     }
   },
   "plugins": [
