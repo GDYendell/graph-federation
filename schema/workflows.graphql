@@ -51,7 +51,7 @@ type PageInfo @shareable {
 	"""
 	When paginating backwards, the cursor to continue.
 	"""
-	startCursor: String
+	startCursor: String!
 	"""
 	When paginating forwards, the cursor to continue.
 	"""
