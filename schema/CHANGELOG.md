@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/GDYendell/graph-federation/compare/supergraph-schema@v2.1.0...supergraph-schema@v3.0.0) (2025-04-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* actually startCursor definitely should be required
+
+### Bug Fixes
+
+* actually startCursor definitely should be required ([bc8829d](https://github.com/GDYendell/graph-federation/commit/bc8829ddffd4546c3d4207b78f352da11fd762e3))
+
 ## [2.1.0](https://github.com/GDYendell/graph-federation/compare/supergraph-schema@v2.0.0...supergraph-schema@v2.1.0) (2025-04-16)
 
 

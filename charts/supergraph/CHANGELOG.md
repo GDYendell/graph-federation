@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0](https://github.com/GDYendell/graph-federation/compare/supergraph@v2.1.0...supergraph@v3.0.0) (2025-04-16)
+
+
+### Miscellaneous Chores
+
+* **supergraph:** Synchronize supergraph versions
+
 ## [2.1.0](https://github.com/GDYendell/graph-federation/compare/supergraph@v2.0.0...supergraph@v2.1.0) (2025-04-16)
 
 
