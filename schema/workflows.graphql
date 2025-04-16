@@ -266,7 +266,7 @@ The status of a workflow
 union WorkflowStatus = WorkflowPendingStatus | WorkflowRunningStatus | WorkflowSucceededStatus | WorkflowFailedStatus | WorkflowErroredStatus
 
 """
-All tasks in the workflow have succeded
+All tasks in the workflow have succeeded
 """
 type WorkflowSucceededStatus {
 	"""
