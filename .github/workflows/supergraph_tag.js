@@ -27,15 +27,17 @@ module.exports = async ({github, context, token}) => {
   const commitsSince = lastTag ? await git.raw('rev-list', `${lastTag}..HEAD`, '--count') : await git.raw('rev-list', '--count', '--all');
   console.log(`Commits Since: ${commitsSince}`);
 
-  let rcVersion = '';
+  let version = '';
   if (pullRequest !== undefined) {
-
     const releaseData = pullRequest.body.releaseData.find((release) => release.component === 'supergraph-schema');
-    rcVersion = commitsSince !== 0 ? `${releaseData.version.major}.${releaseData.version.minor}.${releaseData.version.patch}-rc${commitsSince}` : `${releaseData.version.major}.${releaseData.version.minor}.${releaseData.version.patch}`;
-    console.log(`Release Candidate Version: ${rcVersion}`);
+    version = commitsSince !== 0 ? `${releaseData.version.major}.${releaseData.version.minor}.${releaseData.version.patch}-rc${commitsSince}` : `${releaseData.version.major}.${releaseData.version.minor}.${releaseData.version.patch}`;
+    console.log(`Release Candidate Version: ${version}`);
   } else if (lastTag !== undefined && commitsSince === 0)  {
-    rcVersion = lastTag.split("@v").pop();
+    version = lastTag.split("@v").pop();
+    console.log(`Release Version: ${version}`);
+  } else {
+    console.log(`No version to release.`);
   };
 
-  return rcVersion
+  return version
 }
