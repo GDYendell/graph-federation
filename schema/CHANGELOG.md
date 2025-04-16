@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/GDYendell/graph-federation/compare/supergraph-schema@v2.0.0...supergraph-schema@v2.1.0) (2025-04-16)
+
+
+### Features
+
+* make startCursor optional again ([4b31028](https://github.com/GDYendell/graph-federation/commit/4b31028b9a696b3afd767e628b0e550adcf4c00f))
+
 ## [2.0.0](https://github.com/GDYendell/graph-federation/compare/supergraph-schema@v1.0.2...supergraph-schema@v2.0.0) (2025-04-16)
 
 
